@@ -8,7 +8,7 @@ const Contact = () => {
           <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', textAlign: 'center' }}>Contact <span className="highlight">Us</span></h1>
           <p style={{ color: 'var(--text-secondary)', textAlign: 'center', marginBottom: '0.5rem' }}>Ready to start planning? Send us a message and our travel experts will get back to you shortly.</p>
           <div style={{ textAlign: 'center', marginBottom: '2rem', color: 'var(--brand-dark)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <img src="/assets/owner.jpeg" alt="K.CHANDRA BABU (Vasu)" style={{ width: '120px', height: '120px', borderRadius: '50%', objectFit: 'cover', marginBottom: '1rem', border: '4px solid #0ea5e9', boxShadow: '0 4px 14px rgba(0,0,0,0.1)' }} />
+            <img src={`${import.meta.env.BASE_URL}assets/owner.jpeg`} alt="K.CHANDRA BABU (Vasu)" style={{ width: '120px', height: '120px', borderRadius: '50%', objectFit: 'cover', marginBottom: '1rem', border: '4px solid #0ea5e9', boxShadow: '0 4px 14px rgba(0,0,0,0.1)' }} />
             <div style={{ marginBottom: '1.5rem', fontSize: '1.1rem' }}>
               <strong>Owner:</strong> K.CHANDRA BABU (Vasu)<br />
               <strong>Mobile/Phone:</strong> +91 9491340504<br />

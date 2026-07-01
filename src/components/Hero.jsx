@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-background">
-        <img src="/assets/chardham%20hero%20background.png" alt="Char Dham Spiritual Background" className="hero-img" />
+        <img src={`${import.meta.env.BASE_URL}assets/chardham%20hero%20background.png`} alt="Char Dham Spiritual Background" className="hero-img" />
         <div className="hero-overlay"></div>
       </div>
       
