@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-brand">
           <div className="footer-logo">
             <Plane className="nav-icon" />
-            <span>Sri Varahi Theerthyatra Special</span>
+            <span>Sri Varahi Theerthayatra</span>
           </div>
           <p>Your ultimate partner for unforgettable tropical escapes and premium global adventures.</p>
         </div>
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Sri Varahi Theerthyatra Special. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Sri Varahi Theerthayatra. All rights reserved.</p>
       </div>
     </footer>
   );
