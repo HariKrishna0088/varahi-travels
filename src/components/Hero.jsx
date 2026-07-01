@@ -11,7 +11,7 @@ const Hero = () => {
       </div>
       
       <div className="container hero-content animate-fade-in-up">
-        <h1>Spiritual & Family Journeys with <span className="highlight">Sri Varahi Theerthayatra</span></h1>
+        <h1>Spiritual & Family Journeys with <span className="highlight">Sri Varahi Tirtha Yatra</span></h1>
         <p>Curated premium travel experiences. Whether you seek deep devotional tours, group adventures, or unforgettable family trips, your journey begins here.</p>
         
         <div className="hero-search glass-panel">

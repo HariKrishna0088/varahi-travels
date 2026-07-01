@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="nav-container">
         <Link to="/" className="nav-logo">
           <Plane className="nav-icon" />
-          <span>Sri Varahi Theerthayatra</span>
+          <span>Sri Varahi Tirtha Yatra</span>
         </Link>
         <div className={`nav-links ${isOpen ? 'active' : ''}`}>
           <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
