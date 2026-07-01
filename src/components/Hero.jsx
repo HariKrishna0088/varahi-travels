@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin } from 'lucide-react';
 import './Hero.css';
 
@@ -19,9 +20,9 @@ const Hero = () => {
             <MapPin className="icon" />
             <input type="text" placeholder="Where do you want to go?" />
           </div>
-          <button className="btn btn-primary">
+          <Link to="/packages" className="btn btn-primary" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
             Explore <ArrowRight size={18} />
-          </button>
+          </Link>
         </div>
       </div>
     </section>
