@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Plane } from 'lucide-react';
 import './Footer.css';
 
@@ -16,15 +17,15 @@ const Footer = () => {
         <div className="footer-links">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/packages">Tour Packages</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/packages">Tour Packages</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
         <div className="footer-contact">
           <h3>Contact Us</h3>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: '1rem' }}>
-            <img src="/assets/owner.jpeg" alt="K.CHANDRA BABU (Vasu)" style={{ width: '60px', height: '60px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #0ea5e9' }} />
+            <img src={`${import.meta.env.BASE_URL}assets/owner.jpeg`} alt="K.CHANDRA BABU (Vasu)" style={{ width: '60px', height: '60px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #0ea5e9' }} />
             <div>
               <p style={{ margin: 0, color: '#fff' }}><strong>K.CHANDRA BABU (Vasu)</strong></p>
               <p style={{ margin: 0, fontSize: '0.9rem', color: '#ccc' }}>+91 9491340504</p>
