@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { destinations } from '../data/destinations';
-import { Star, ArrowLeft } from 'lucide-react';
+import { Star, ArrowLeft, Bus, TrainFront } from 'lucide-react';
 
 const DestinationDetails = () => {
   const { id } = useParams();
@@ -40,7 +40,7 @@ const DestinationDetails = () => {
           <div style={{ textAlign: 'center' }}>
             <h1 style={{ color: 'white', fontSize: '4rem', padding: '0 20px', marginBottom: '10px' }}>{destination.title}</h1>
             <span style={{ color: 'white', fontSize: '1.2rem', background: 'rgba(14, 165, 233, 0.8)', padding: '5px 15px', borderRadius: '20px' }}>
-              {destination.duration} • Food & Stay Included
+              {destination.duration} • Food & Stay • Bus & Train Included
             </span>
           </div>
         </div>
@@ -63,6 +63,49 @@ const DestinationDetails = () => {
             <h3 style={{ marginTop: 0, color: 'var(--brand-dark)', marginBottom: '10px', fontSize: '1.5rem' }}>Our Specialty</h3>
             <p style={{ margin: 0, color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.6' }}>{destination.specialty}</p>
           </div>
+
+          {/* Transport Facilities - Included in Package */}
+          {destination.transport && (
+            <div style={{ marginTop: '30px', background: 'linear-gradient(135deg, #f0fdf4, #eff6ff)', padding: '30px', borderRadius: '15px', border: '1px solid #d1fae5' }}>
+              <h3 style={{ marginTop: 0, color: 'var(--brand-dark)', marginBottom: '20px', fontSize: '1.5rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                🚌 Journey Transport <span style={{ fontSize: '0.85rem', fontWeight: '600', background: 'linear-gradient(135deg, #059669, #10b981)', color: 'white', padding: '4px 12px', borderRadius: '20px' }}>Included in Package</span>
+              </h3>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '15px' }}>
+                {/* Bus Options */}
+                <div style={{ background: 'white', padding: '20px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+                    <div style={{ background: 'linear-gradient(135deg, #059669, #10b981)', padding: '8px', borderRadius: '10px', display: 'flex' }}>
+                      <Bus size={22} color="white" />
+                    </div>
+                    <h4 style={{ margin: 0, color: 'var(--brand-dark)', fontSize: '1.1rem' }}>Bus Facility</h4>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    {destination.transport.bus.map((opt, i) => (
+                      <span key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-secondary)', fontSize: '1rem' }}>
+                        <span style={{ color: '#059669', fontWeight: 'bold' }}>✓</span> {opt}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                {/* Train Options */}
+                <div style={{ background: 'white', padding: '20px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+                    <div style={{ background: 'linear-gradient(135deg, #7c3aed, #a78bfa)', padding: '8px', borderRadius: '10px', display: 'flex' }}>
+                      <TrainFront size={22} color="white" />
+                    </div>
+                    <h4 style={{ margin: 0, color: 'var(--brand-dark)', fontSize: '1.1rem' }}>Train Facility</h4>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    {destination.transport.train.map((opt, i) => (
+                      <span key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-secondary)', fontSize: '1rem' }}>
+                        <span style={{ color: '#7c3aed', fontWeight: 'bold' }}>✓</span> {opt}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', marginTop: '30px' }}>
             <div style={{ background: 'var(--bg-light)', padding: '30px', borderRadius: '15px' }}>

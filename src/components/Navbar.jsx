@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Plane, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="navbar glass-panel">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          <Plane className="nav-icon" />
+          <img src="/logo.png" alt="Sri Varahi Tirtha Yatra Logo" className="nav-icon" />
           <span>Sri Varahi Tirtha Yatra</span>
         </Link>
         <div className={`nav-links ${isOpen ? 'active' : ''}`}>
